@@ -10,7 +10,7 @@ const barEntrance = new Queue("bar-entrance", { redis });
 bar.process((job, done) => barWorker(job, done));
 barEntrance.process((job, done) => barEntranceWorker(job, done));
 
-// bar.add({ name: "Jan" });
+bar.add({ name: "Jan", age: 36 });
 
 const queues = [
   {
